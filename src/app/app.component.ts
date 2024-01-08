@@ -14,7 +14,6 @@ export class AppComponent {
 
 openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
-
     width: '280px'
     });
   }
