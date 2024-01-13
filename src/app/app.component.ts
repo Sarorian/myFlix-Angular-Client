@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
 import { MatDialog } from '@angular/material/dialog';
-
+import { MovieCardComponent } from './movie-card/movie-card.component';
+import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,4 +18,17 @@ openUserRegistrationDialog(): void {
     width: '280px'
     });
   }
+
+openLoginUserDialog(): void {
+    this.dialog.open(UserLoginFormComponent, {
+    width: '280px'
+    });
+  }
+
+openMoviesDialog(): void {
+   this.dialog.open(MovieCardComponent, {
+   width: '500px'
+    });
+  }
 }
+

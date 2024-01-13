@@ -1,9 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { MatDialogRef } from '@angular/material/dialog';
-
 import { FetchApiDataService } from '../fetch-api-data.service';
-
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -13,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class UserRegistrationFormComponent {
 
-  @Input() userData = { username: '', password: '', email: '', birthday: ''};
+  @Input() userData = { Username: '', Password: '', Email: '', Birthday: ''};
 
   constructor(
     public fetchApiData: FetchApiDataService,
