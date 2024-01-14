@@ -18,6 +18,13 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'welcome', component: WelcomePageComponent },
+  { path: 'movies', component: MovieCardComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
+];
 
 @NgModule({
   declarations: [
@@ -32,6 +39,7 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes),
     FormsModule,
     MatDialogModule,
     MatInputModule,
