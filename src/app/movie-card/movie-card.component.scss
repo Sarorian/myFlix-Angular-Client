@@ -1,9 +1,12 @@
-// ::ng-deep {
-//     .mat-mdc-dialog-component-host {
-//     display: flex;
-//     align-items: flex-end;
-//     }
-//     .cdk-overlay-pane {
-//         width: 80vw !important;
-//     }
-// }
+::ng-deep {
+    .mat-icon.favorite {
+        color: black;
+      }
+      .mat-card.custom-card {
+        background-color: #dd3c3c; /* Set your desired background color */
+      }
+      
+      .mat-card-title.custom-title {
+        color: black;
+}
+}
