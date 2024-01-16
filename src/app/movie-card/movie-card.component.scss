@@ -1,12 +1,36 @@
 ::ng-deep {
+
+    body {
+      background-color: #dddddd;
+      overflow-y: hidden;
+      padding:0;
+    }
+
+    #card-container {
+      display: flex;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      padding: 0 3em;
+    }
+
     .mat-icon.favorite {
         color: black;
       }
-      .mat-card.custom-card {
-        background-color: #dd3c3c; /* Set your desired background color */
-      }
       
-      .mat-card-title.custom-title {
+    .custom-title {
         color: black;
-}
+        text-align: left;
+      }
+
+    .movie-img {
+        height: 60vh;
+        object-fit: contain;
+      }
+
+    .custom-card {
+      margin: 0 1em;
+    }  
 }
