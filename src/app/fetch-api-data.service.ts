@@ -58,7 +58,9 @@ export class FetchApiDataService {
     const token = localStorage.getItem('token');
     return this.http.get(apiUrl + 'movies',{headers: this.tokenHeader() })
     .pipe(
-      map((res: any) => this.extractResponseData(res)),
+      map((res: any) => {
+        return this.extractResponseData(res)
+      }),
       catchError(this.handleError)
     );
   }
