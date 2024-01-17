@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service'
 import { MatDialog } from '@angular/material/dialog';
 import { GenreCardComponent } from '../genre-card/genre-card.component';
+import { DirectorCardComponent } from '../director-card/director-card.component';
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
@@ -29,5 +30,12 @@ openGenreCardDialog(genre: any): void {
         height: "80%",
         data: {genre}
     });
+}
+openDirectorCardDialog(director: any): void {
+  this.dialog.open(DirectorCardComponent, {
+      width: "80%",
+      height: "80%",
+      data: {director}
+  });
 }
 }

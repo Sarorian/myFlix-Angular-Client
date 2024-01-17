@@ -14,12 +14,17 @@ export class FetchApiDataService {
         private dataService: DataService
         ) { }
 
-  private tokenHeader(): HttpHeaders {
-    const token = localStorage.getItem('token');
-    return new HttpHeaders({
-        Authorization: 'Bearer ' + token
-    });
-  }
+        private tokenHeader(): HttpHeaders {
+          if (typeof localStorage !== 'undefined') {
+            const token = localStorage.getItem('token');
+            return new HttpHeaders({
+              Authorization: 'Bearer ' + token
+            });
+          } else {
+            // Handle the case where localStorage is not available (e.g., server-side rendering)
+            return new HttpHeaders();
+          }
+        }
 
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);

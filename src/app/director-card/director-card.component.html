@@ -1,26 +1,26 @@
-<mat-card class="genre-card-container">
+<mat-card class="director-card-container">
   <mat-card-header
     style="justify-content: center; align-items: center; text-align: center"
   >
     <mat-card-title>
       <h1>
-        {{ genre.name }}
+        {{ director.name }}
       </h1>
     </mat-card-title>
   </mat-card-header>
 
   <mat-card-content class="content-row">
     <div class="image-container">
-      <img [src]="genre.image" [alt]="'Image of ' + genre.name" />
+      <img [src]="director.image" [alt]="'Image of ' + director.name" />
     </div>
     <div class="info-container">
-      <h2>Name:</h2>
+      <h2>Director:</h2>
       <p>
-        {{ genre.name }}
+        {{ director.name }}
       </p>
-      <h2>Description:</h2>
+      <h2>Biography:</h2>
       <p>
-        {{ genre.description }}
+        {{ director.bio }}
       </p>
     </div>
   </mat-card-content>
